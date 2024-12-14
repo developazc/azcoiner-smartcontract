@@ -1,0 +1,1683 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x09096d8bFA1c66cEf3325723afe3bF3E7252906d",
+      "txHash": "0x316b97e671a8176eaef7afe066279bada72a8ba7ccc841de09e7c49b327fe4c9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5e09E2a5E9bE85aaE6f61a00315478e8F9d9e573",
+      "txHash": "0x2908457cba7cd4d876ebc84faeff93cb253e2a4984697088b53220aaab20cb13",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "1977a2fdecd8387ff8b3054a33ae928a64f1d1c8c422c1e90aedb0bcaf922897": {
+      "address": "0x363a9975AD26986Bc4fd06012F83260E60F1F9da",
+      "txHash": "0x547a7550a0938516ad18606098ae3829d09a81a05bdda40d6977361e0460790e",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)2848_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)2848_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)2832": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)2848_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)2832",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "e272a39d2488a187394b7c9f5fa4e56344447f6bfb4c2c31216dfccbb1f2dfa4": {
+      "address": "0x4BD34E216b2F07409E4CA58E629C06F67D917399",
+      "txHash": "0xb04206e93dbaa09b5c4d0b0eacbf87505b7636a63c09a68c4f670e603b0280a3",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)2848_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)2848_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)2832": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)2848_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)2832",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "b9c7fa46fe0f4477df7666545ce15fe751c7a09ef7e576fcab240317394c52a6": {
+      "address": "0xe51C320a7996f4c8166918e48183dD320D626c05",
+      "txHash": "0x5ee9ea137f3bf5d03a32ccf1dd9949f69f0207e4cb14998fd505a29a0a8a1d63",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)2848_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)2848_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)2832": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)2848_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)2832",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "5fec38b37da43a2c512cbacfa848acc805ed56511f443116e6ee6859e9b0050f": {
+      "address": "0xea3Fc49a276607215CF3231B00Dd43135490aBB2",
+      "txHash": "0xc239e347f31018f744f4c51ba33787a7d4bc670a9fac30e37c3baba12c563e4b",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)4130_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)4130_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)4114": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)4130_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)4114",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "33d96fc3c4f2ab735d3d870a86f84230c03d4cbe236e74329a341d2a6fb638dc": {
+      "address": "0xe8Cc63b58CD014b5599358c56DcB5b96712df40E",
+      "txHash": "0xdc7a765c5fc2207443866984c8165e51dc37ac514ac5e915adfddd3f952dbd35",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)2848_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)2848_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)2832": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)2848_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)2832",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "0f27fe4bebf67dc1e9a055b0d49dfa6df24eab8344c099fc410df9ddb9dbb74f": {
+      "address": "0x97d8301cc5e29608a489A362f3E5394B8149f360",
+      "txHash": "0x5d450474f7ef720f299d81f178c419075bea63de1f41c98c4a287f5b31b4fde3",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)2848_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)2848_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)2832": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)2848_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)2832",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "aba6684f7ee22e5281d97827d12e9613fdd232649190e80b88955bd1091e3d32": {
+      "address": "0xa2B8365a7D5CdFA88552Ba512D92d26f49ef0C98",
+      "txHash": "0x74c7ccf5715864a9b0c48c3459fe27d3bded968fa24d57da02a9bf7e8f4b1312",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "index",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:18"
+          },
+          {
+            "label": "nativeAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:20"
+          },
+          {
+            "label": "marketplaceFee",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_uint16",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:22"
+          },
+          {
+            "label": "destinationFeeAddress",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address_payable",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:24"
+          },
+          {
+            "label": "signer",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:26"
+          },
+          {
+            "label": "acceptCollection",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:28"
+          },
+          {
+            "label": "allListings",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Listing)2848_storage)dyn_storage",
+            "contract": "MarketPlace",
+            "src": "contracts/MarketPlace.sol:45"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)64_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)14_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(ReentrancyGuardStorage)136_storage": {
+            "label": "struct ReentrancyGuardUpgradeable.ReentrancyGuardStorage",
+            "members": [
+              {
+                "label": "_status",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Listing)2848_storage)dyn_storage": {
+            "label": "struct MarketPlace.Listing[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(ListingStatus)2832": {
+            "label": "enum MarketPlace.ListingStatus",
+            "members": [
+              "Listing",
+              "Cancelled",
+              "Bought"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Listing)2848_storage": {
+            "label": "struct MarketPlace.Listing",
+            "members": [
+              {
+                "label": "index",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addressNFTCollection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "addressPaymentToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(ListingStatus)2832",
+                "offset": 20,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.ReentrancyGuard": [
+            {
+              "contract": "ReentrancyGuardUpgradeable",
+              "label": "_status",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol:40",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
